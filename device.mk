@@ -58,12 +58,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/idc/sec_e-pen.idc:system/usr/idc/sec_e-pen.idc \
     $(LOCAL_PATH)/usr/idc/sec_touchscreen.idc:system/usr/idc/sec_touchscreen.idc
 
-# Gps
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/bin/gps_daemon.sh:system/bin/gps_daemon.sh \
-    $(LOCAL_PATH)/init.gps.rc:root/init.gps.rc \
-    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
-
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/twrp.fstab:recovery/root/etc/twrp.fstab
