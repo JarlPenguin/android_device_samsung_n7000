@@ -17,16 +17,20 @@
 # Release name
 PRODUCT_RELEASE_NAME := GT-N7000
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/n7000/full_n7000.mk)
+# Inherit from n7000 device
+$(call inherit-product, device/samsung/n7000/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := n7000
 PRODUCT_NAME := lineage_n7000
 PRODUCT_BRAND := Samsung
+PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-N7000
 
 #Set build fingerprint / ID / Prduct Name ect.
